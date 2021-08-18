@@ -1,16 +1,17 @@
 import './App.css';
 
 function App() {
-
-
+  
   const draggables = document.querySelectorAll('.draggable');
   const containers = document.querySelectorAll('.container');
 
   draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
+      console.log("dragstart")
       draggable.classList.add('dragging');
     })
     draggable.addEventListener('dragend', () => {
+      console.log("dragend")
       draggable.classList.remove('dragging');
     })
   })
